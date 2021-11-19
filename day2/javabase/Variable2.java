@@ -14,7 +14,7 @@ package day2.javabase;
 
     3.1变量安装数据类型来分
         1基本数据类型
-            整型 byte ;short;int ;long;
+            整型 byte(1字节=8bit) ;short(2字节);int(4字节) ;long(8字节);
             浮点型 float ;double
             字符型 char
             布尔型 boolean
@@ -29,14 +29,31 @@ package day2.javabase;
 */
 public class Variable2 {
     public static void main(String[] args) {
-        // 定义变量  先定义  在赋值
+        // 定义变量  先  在 
         int myAge = 12;
         System.out.println(myAge);
-        //也可以先定义
+        // 也可以先定义
         int newYear;
-        //后赋值
+        // 后赋值
         newYear = 2021;
         System.out.println(newYear);
+
+        // 整型 byte(1字节=8bit) ;short(2字节);int(4字节) ;long(8字节);
+        // byte范围-128~127
+        byte b1 = 12;
+        byte b2 = -128;
+        // b2 = 128; 超出byte范围 编译补通过
+        System.out.println(b1);
+        System.out.println(b2);
+
+        /*
+        声明long型变量，必须以l 或 L 结尾巴
+        通常，定义整型变量时，使用int
+        */ 
+        short s1 = 128;
+        int s2 = 1234;
+        long s3 = 324234234L;
+        System.out.println(s3);
     }
 
 }
