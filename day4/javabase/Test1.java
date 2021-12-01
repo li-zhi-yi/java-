@@ -36,9 +36,12 @@ public class Test1 {
 
         int[] ids;//声明整型类型的数组
         //1.1 静态初始化:数组的初始化和数组元素的赋值炒作同时进行
-        ids=new int[]{1001,1002,1003}
+        ids=new int[]{1001,1002,1003};
+        System.out.println(ids); 
+        System.out.println(id); 
+        System.out.println(num); 
         //1.2 动态初始化：数组的初始化和数组元素的赋值操作分开进行
-        String[] names=new String[4]
+        String[] names=new String[4];
 
         //总结： 数组一旦初始化完成，其长度也就确定了
 
@@ -115,7 +118,7 @@ public class Test1 {
 
         String[] arr5=new String[4];
         System.out.println(arr5[0]);
-        if(arr5[0]===null){
+        if(arr5[0]==null){
             System.out.println("北京天气不错");
         }
     }
