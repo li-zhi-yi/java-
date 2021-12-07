@@ -31,7 +31,7 @@ public class Test2 {
         System.out.println(arr2[1][1]);// null
 
         arr3[0] = new String[4];
-        System.out.println(arr3[1][0]);
+        // System.out.println(arr3[1][0]);
 
         // 3获取数组的长度 length
         System.out.println(arr1.length);
@@ -61,6 +61,6 @@ public class Test2 {
 
         double[][] arr6 = new double[4][];
         System.out.println(arr6[1]);// 地址值
-        System.out.println(arr6[3][0]);// 空指针异常 报错
+        // System.out.println(arr6[3][0]);// 空指针异常 报错
     }
 }
