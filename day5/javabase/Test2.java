@@ -1,0 +1,65 @@
+/*
+类中属性的使用
+属性(成员变量)  VS  局部变量
+1 相同点
+    1.1定义变量的格式:数据类型 变量名=变量值
+    1.2 先声明 后使用
+    1.3 变量都有其对应的作用域
+
+
+
+
+2 不同点
+    2.1在类中声明的位置的不同
+    属性:直接定义在类的一对{}内
+    局部变量:声明在方法内,方法形参,代码块内,构造器形参,构造器内部的变量
+
+    2.2 关于权限修饰符的不同
+    属性 : 可以在声明属性时,指明其权限,使用权限修饰符
+    宠用的权限修饰符:private,public,缺省,protected  ----->封装性
+    目前,大家声明属性时,都使用缺省就可以了
+
+    局部变量:不可以使用权限修饰符
+
+    2.3 默认初始化值的情况
+    属性:
+    整型(byte,short ,int ,long):0
+    浮点型(float,double):0.0
+    字符型(char):0(或'\u0000')
+    布尔型(boolean):false
+    
+    引用数据类型(类,数组,接口):null
+
+    局部变量: 没有默认初始值
+        意味着,我们在调用局部变脸之前,一定要显式赋值
+        特别地:形参在调用时,我们赋值即可
+    2.4 在内存中加载的位置
+        属性加载到堆空间中(非static)
+        局部变量:加载到栈空间中
+*/
+public class Test2 {
+    public static void main(String[] args) {
+        User u1=new User();
+        System.out.println(u1.name);
+        System.out.println(u1.age);
+        System.out.println(u1.isMale);
+    }
+}
+
+class User{
+    //属性(或成员变量)
+    private String name;
+    public int age;
+    boolean isMale;
+
+    public void talk(String language){//形参也是局部变量
+        String food="大饼";//局部变量
+        System.out.println("爱吃"+food);
+    }
+
+    public void eat(){
+        String food="披萨";//局部变量
+        System.out.println("南方人"+food);
+    }
+
+}
